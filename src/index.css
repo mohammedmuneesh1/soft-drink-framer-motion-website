@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+@layer base{
+  .text-shadow{
+    text-shadow : -6px 6px 10px rgba(0,0,0,0.4);
+  }
+}
+@layer utilities {
+  .img-shadow {
+    filter : drop-shadow(-6px 8px 15px rgba(0,0,0,0.4)) 
+  }
+}
+
+
+/* DEFAULT:"1rem", //THIS ALL MAX-WIDTH PROPERTY . DEFAULT IS WHEN SCREEN SIZE LESS THAN 640PX
+sm:"2rem",
+lg:"4rem",
+xl:"5rem",
+
+ */
+
+/*------------------------------------------------------------ CUSTOM PADDING START  --------------------------------------------------------------------*/ 
+
+.layoutPadding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  /* For screens with a minimum width of 640px (sm breakpoint) */
+  @media (min-width: 640px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* For screens with a minimum width of 1024px (lg breakpoint) */
+  @media (min-width: 1024px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  /* For screens with a minimum width of 1280px (xl breakpoint) */
+  @media (min-width: 1280px) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
